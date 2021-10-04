@@ -1,7 +1,8 @@
-# Script to read in Apple mobility data from a csv file and subset the data 
-# to just include rows from any particular US state and then write out a 
+# Script to read in Apple mobility data from a csv file and subset the data
+# to just include rows from any particular US state and then write out a
 # csv file that only has that subset
-# uses function in the code/function directory 
+# uses function in the code/function directory
+
 
 # Atul Preetham
 # apreetham@dons.usfca.edu
