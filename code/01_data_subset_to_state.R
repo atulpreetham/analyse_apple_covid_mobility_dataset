@@ -25,4 +25,3 @@ for (state_to_subset in c("California", "Texas", "Kansas",
   input_file_name <- "data/raw_data/applemobilitytrends-2021-10-03.csv"
   subset_mobility_data_to_state(input_file_name, state_to_subset)
 }
-
