@@ -23,10 +23,10 @@ count_cities_counties <- function(input_subsetted_state) {
   state_to_count <- read.csv(input_subsetted_state)
   
   #defensive programming check to make sure input data is correct
-  if (nrows(input_subsetted_state) == 0) {
-    stop("ERROR: please check your input file")
+  defense_check <- nrow(state_to_count)
+  if (defense_check == 0) {
+    stop("ERROR: check your input file")
   }
-
   # starting of with dplyr chains
   count_cities_counties_by_type <- state_to_count %>%
     select(geo_type, region, transportation_type) %>%
@@ -43,4 +43,4 @@ count_cities_counties <- function(input_subsetted_state) {
 
 #testing function:
 count_cities_counties(
-  input_subsetted_state = "output/applemobilitytrends-2021-10-03_Michigan.csv")
+  input_subsetted_state = "output/applemobilitytrends-2021-10-03_Alaska.csv")
