@@ -13,5 +13,5 @@ source("code/functions/subset_mobility_data_to_state.R")
 
 # testing the use of function
 subset_mobility_data_to_state(
-  input_file_name = "data/raw_data/applemobilitytrends-2021-09-21.csv",
-  state_to_subset = "Kansas")
+  input_file_name = "data/raw_data/applemobilitytrends-2021-10-03.csv",
+  state_to_subset = "Florida")

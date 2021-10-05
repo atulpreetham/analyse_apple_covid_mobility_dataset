@@ -11,6 +11,5 @@
 source("code/functions/count_cities_counties.R")
 
 #testing function
-count_cities_counties(input_subsetted_state = 
+count_cities_counties(input_subsetted_state =
                         "output/applemobilitytrends-2021-10-03_Florida.csv")
-
