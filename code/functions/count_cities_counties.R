@@ -19,10 +19,10 @@ count_cities_counties <- function(input_subsetted_state) {
   # be the output of the previous script i.e the state csv files that we
   # already subsetted.
 
-  #load in the dataset from the subsetted state files
+  # load in the dataset from the subsetted state files
   state_to_count <- read.csv(input_subsetted_state)
 
-  #defensive programming check to make sure input data is correct
+  # defensive programming check to make sure input data is correct
   defense_check <- nrow(state_to_count)
   if (defense_check == 0) {
     stop("ERROR: check your input file")
