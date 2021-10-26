@@ -18,12 +18,12 @@ subset_mobility_data_to_state <- function(input_file_name,
   # the state name in it
   state_data <- all_covid_data %>%
     dplyr::filter(`sub-region` == state_to_subset)
-  
+
   #check that the subsetted data actually has data in it
   if (nrow(state_data) == 0) {
     stop("ERROR: No rows matching given state name. Check for typo")
   }
-  
+
   #sanitizing the state name to not include any spaces
   state_no_spaces <- gsub(state_to_subset, pattern = " ", replacement = "_")
 

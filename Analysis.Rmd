@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE, message = TRUE)
 
 ```{r set-parameters}
 # set the state to work with
-state_to_analyse <- "California"
+state_to_analyse <- "North Carolina"
 
 # sanitizing the state names for output files
 state_no_spaces <- gsub(state_to_analyse,
@@ -43,7 +43,7 @@ source("code/functions/count_cities_counties.R")
 source("code/functions/convert_wide_to_long.R")
 ```
 
-## Background and Objectives
+## Project Description
 
 This rmarkdown file will use `ggplot2`[@ggplot2] and `dplyr` [@dplyr] packages to analyse the Apple maps mobility data from the time before the COVID-19 pandemic through the initial lockdowns and the continuing changes over the course of the year.
 
@@ -51,7 +51,7 @@ The goal will be to create a subset to a particular state, tally up the number o
 
 The state that this document will analyse is `r state_to_analyse`.
 
-## Data Processing
+## Subsetting Data
 
 ```{r subset-state}
 # subset out to the chosen state using the variables set above
@@ -157,9 +157,11 @@ ggsave(plot = timeseries_plot_transit,
 timeseries_plot_transit
 ```
 
+## Session Info
+
 ```{r session-info}
 devtools::session_info()
 ```
 
 
-## Sources Cited 
+## Sources Cited
