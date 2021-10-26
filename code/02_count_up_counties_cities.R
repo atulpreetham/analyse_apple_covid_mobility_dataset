@@ -13,10 +13,6 @@
 # load function
 source("code/functions/count_cities_counties.R")
 
-#testing function
-count_cities_counties(input_subsetted_state =
-                        "output/applemobilitytrends-2021-10-03_Florida.csv")
-
 # using the function to tally the number of cities and counties on the
 # transportation type of any 5 US states of choice using for loop
 
