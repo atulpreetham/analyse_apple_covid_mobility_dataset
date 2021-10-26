@@ -20,7 +20,7 @@ count_cities_counties <- function(input_subsetted_state) {
   # already subsetted.
 
   # load in the dataset from the subsetted state files
-  state_to_count <- read.csv(input_subsetted_state)
+  state_to_count <- readr::read_csv(input_subsetted_state)
 
   # defensive programming check to make sure input data is correct
   defense_check <- nrow(state_to_count)
@@ -34,9 +34,10 @@ count_cities_counties <- function(input_subsetted_state) {
     tally()
 
   # write out the result of the dplyr chain
-  write.csv(count_cities_counties_by_type,
-            file = paste0("output/",
+  readr::write_csv(count_cities_counties_by_type,
+            file = paste0("output/output_mobility_data_tallied/",
                           tools::file_path_sans_ext(
                             basename(input_subsetted_state)),
                           "_cities_counties_count.csv"))
+  return(count_cities_counties_by_type)
 }
