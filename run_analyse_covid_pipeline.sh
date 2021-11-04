@@ -5,4 +5,4 @@
 
 Rscript -e "rmarkdown::render('Analysis.Rmd', \
             params = list(state = 'Arizona', \
-            data = 'data/raw_data/applemobilitytrends-2021-10-23.csv))"
+            data = 'data/raw_data/applemobilitytrends-2021-10-23.csv'))"
