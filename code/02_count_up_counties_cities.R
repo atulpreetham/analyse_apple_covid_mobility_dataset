@@ -22,6 +22,5 @@ for (input_subsetted_state in
        "output/applemobilitytrends-2021-10-03_Kansas.csv",
        "output/applemobilitytrends-2021-10-03_Michigan.csv",
        "output/applemobilitytrends-2021-10-03_Texas.csv")) {
-  source("code/functions/count_cities_counties.R")
   count_cities_counties(input_subsetted_state)
 }
