@@ -8,6 +8,7 @@ Texas. the data is available on : https://covid19.apple.com/mobility
 
 ### Log
 
+* 2021-11-04: Parameterize Rmd and bash script to drive knitting
 * 2021-10-26: Add Rmd to drive entire analysis.
 * 2021-10-24: Added a function script to convert the subsetted state mobility data from a wide format to a long format using the tidyverse package
 * 2021-10-05: Modified the code in the main scripts to include for loops. The loops were used to call and use the functions to iterate data for any 5 states of choice.
