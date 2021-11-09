@@ -10,7 +10,7 @@
 # apreetham@dons.usfca.edu
 
 # defensive check to make sure an input is given
-if [ $# -eq 0]
+if [ $# -eq 0 ]
 then
 	echo "To run the script supply an arguement."
 	echo "The arguement is a compressed fasta file containing SARS-CoV-2 sequences"
@@ -20,9 +20,14 @@ fi
 # defining the input of the file
 input=$1
 
-# tool for calculating the total sequences in the file and assigning the total to the output 
-# folder as a .txt file
-echo "The total number of sequences in the file are"
+# tool for calculating the total sequences in the file
+echo "The total number of sequences in the file is"
 bioawk -c fastx '{print $seq}' $1 | wc -l
+
+# tool for  tallying the sequence dataset from each country from largest to smallest
+echo "The tallied list of SARS-CoV-2 sequences from each country sorted from largest to smallest is"
+bioawk -c fastx '{print $comment}' $1 | cut -d"|" -f 3 | uniq -c | sort -nr
+
+
 
 
