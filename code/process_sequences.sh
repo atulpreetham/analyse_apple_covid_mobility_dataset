@@ -17,17 +17,10 @@ then
 	exit 1
 fi
 
-# defining the input of the file
-input=$1
-
 # tool for calculating the total sequences in the file
 echo "The total number of sequences in the file is"
-bioawk -c fastx '{print $seq}' $1 | wc -l
+bioawk -c fastx '{print $seq}' "$1" | wc -l
 
 # tool for  tallying the sequence dataset from each country from largest to smallest
 echo "The tallied list of SARS-CoV-2 sequences from each country sorted from largest to smallest is"
-bioawk -c fastx '{print $comment}' $1 | cut -d"|" -f 3 | uniq -c | sort -nr
-
-
-
-
+bioawk -c fastx '{print $comment}'"$1" | cut -d"|" -f 3 | uniq -c | sort -nr
